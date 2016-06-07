@@ -75,6 +75,8 @@ public final class JPAlignerBasic implements JPAlignerType
   {
     if (this.line_buffer.length() > 0) {
       this.lines_formatted.add(this.line_buffer.toString().trim());
+      this.line_buffer.setLength(80);
+      this.line_buffer.trimToSize();
       this.line_buffer.setLength(0);
     }
 

@@ -257,14 +257,17 @@ public final class JPJustifierBasic implements JPAlignerType
     }
 
     final List<String> r = new ArrayList<>(this.lines_formatted);
+    this.line_buffer.setLength(80);
+    this.line_buffer.trimToSize();
     this.line_buffer.setLength(0);
+
     this.line_words.clear();
     this.line_words_sum = 0;
     this.lines_formatted.clear();
     return r;
   }
 
-  private boolean couldEverFit(final String wt)
+  private boolean couldEverFit(final CharSequence wt)
   {
     return wt.length() < this.width;
   }
@@ -278,7 +281,7 @@ public final class JPJustifierBasic implements JPAlignerType
     this.line_words.clear();
   }
 
-  private boolean canFit(final String word)
+  private boolean canFit(final CharSequence word)
   {
     return this.line_words_sum + word.length() + 1 < this.width;
   }
