@@ -71,10 +71,19 @@ public final class JPAlignerBasic implements JPAlignerType
   }
 
   @Override
+  public void breakLine()
+  {
+    this.lines_formatted.add(this.line_buffer.toString().trim());
+    this.line_buffer.setLength(0);
+  }
+
+  @Override
   public List<String> finish()
   {
     if (this.line_buffer.length() > 0) {
       this.lines_formatted.add(this.line_buffer.toString().trim());
+      this.line_buffer.setLength(80);
+      this.line_buffer.trimToSize();
       this.line_buffer.setLength(0);
     }
 

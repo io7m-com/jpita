@@ -16,6 +16,7 @@
 
 package com.io7m.jpita.tests.core;
 
+import com.io7m.jpita.core.JPAlignerBasic;
 import com.io7m.jpita.core.JPAlignerType;
 import com.io7m.jpita.core.JPJustifierBasic;
 import com.io7m.jpita.core.JPOverflowBehaviour;
@@ -42,6 +43,61 @@ public final class JPJustifierBasicTest
     Assert.assertEquals(1L, (long) rs.size());
     Assert.assertTrue(rs.get(0).startsWith("One"));
     Assert.assertTrue(rs.get(0).length() <= width);
+  }
+
+  @Test
+  public void testBreakLinesOnly()
+  {
+    final int width = 80;
+    final JPAlignerType a =
+      JPJustifierBasic.create(
+        JPOverflowBehaviour.OVERFLOW_ANYWAY,
+        JPJustifierBasic.JUSTIFY_UNDER_HALF,
+        width);
+    a.breakLine();
+    a.breakLine();
+    a.breakLine();
+    a.breakLine();
+    a.breakLine();
+    final List<String> rs = a.finish();
+    JPTestUtilities.show(width, rs);
+
+    Assert.assertEquals(5L, (long) rs.size());
+    Assert.assertTrue(rs.get(0).isEmpty());
+    Assert.assertTrue(rs.get(1).isEmpty());
+    Assert.assertTrue(rs.get(2).isEmpty());
+    Assert.assertTrue(rs.get(3).isEmpty());
+    Assert.assertTrue(rs.get(4).isEmpty());
+  }
+
+  @Test
+  public void testBreakLinesWords()
+  {
+    final int width = 80;
+    final JPAlignerType a =
+      JPJustifierBasic.create(
+        JPOverflowBehaviour.OVERFLOW_ANYWAY,
+        JPJustifierBasic.JUSTIFY_UNDER_HALF,
+        width);
+    a.addWord("a");
+    a.breakLine();
+    a.addWord("b");
+    a.breakLine();
+    a.addWord("c");
+    a.breakLine();
+    a.addWord("d");
+    a.breakLine();
+    a.addWord("e");
+    a.breakLine();
+    final List<String> rs = a.finish();
+    JPTestUtilities.show(width, rs);
+
+    Assert.assertEquals(5L, (long) rs.size());
+    Assert.assertEquals("a", rs.get(0));
+    Assert.assertEquals("b", rs.get(1));
+    Assert.assertEquals("c", rs.get(2));
+    Assert.assertEquals("d", rs.get(3));
+    Assert.assertEquals("e", rs.get(4));
   }
 
   @Test

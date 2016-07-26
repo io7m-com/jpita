@@ -33,6 +33,12 @@ public interface JPAlignerType
   void addWord(String w);
 
   /**
+   * Insert a hard line break.
+   */
+
+  void breakLine();
+
+  /**
    * Finish the current layout, effectively resetting it to a blank canvas.
    *
    * @return A list of formatted lines
