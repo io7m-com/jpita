@@ -41,6 +41,53 @@ public final class JPAlignerBasicTest
   }
 
   @Test
+  public void testBreakLinesOnly()
+  {
+    final int width = 80;
+    final JPAlignerType a = JPAlignerBasic.create(width);
+    a.breakLine();
+    a.breakLine();
+    a.breakLine();
+    a.breakLine();
+    a.breakLine();
+    final List<String> rs = a.finish();
+    JPTestUtilities.show(width, rs);
+
+    Assert.assertEquals(5L, (long) rs.size());
+    Assert.assertTrue(rs.get(0).isEmpty());
+    Assert.assertTrue(rs.get(1).isEmpty());
+    Assert.assertTrue(rs.get(2).isEmpty());
+    Assert.assertTrue(rs.get(3).isEmpty());
+    Assert.assertTrue(rs.get(4).isEmpty());
+  }
+
+  @Test
+  public void testBreakLinesWords()
+  {
+    final int width = 80;
+    final JPAlignerType a = JPAlignerBasic.create(width);
+    a.addWord("a");
+    a.breakLine();
+    a.addWord("b");
+    a.breakLine();
+    a.addWord("c");
+    a.breakLine();
+    a.addWord("d");
+    a.breakLine();
+    a.addWord("e");
+    a.breakLine();
+    final List<String> rs = a.finish();
+    JPTestUtilities.show(width, rs);
+
+    Assert.assertEquals(5L, (long) rs.size());
+    Assert.assertEquals("a", rs.get(0));
+    Assert.assertEquals("b", rs.get(1));
+    Assert.assertEquals("c", rs.get(2));
+    Assert.assertEquals("d", rs.get(3));
+    Assert.assertEquals("e", rs.get(4));
+  }
+
+  @Test
   public void testWords()
     throws Exception
   {

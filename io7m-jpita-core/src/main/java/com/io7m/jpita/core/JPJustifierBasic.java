@@ -98,7 +98,14 @@ public final class JPJustifierBasic implements JPAlignerType
     final List<String> words)
   {
     final int word_count = words.size();
-    Assertive.require(word_count > 0);
+
+    /**
+     * Inserting hard line breaks can result in lines with no words.
+     */
+
+    if (word_count == 0) {
+      return "";
+    }
 
     /**
      * Don't format single words.
@@ -247,6 +254,12 @@ public final class JPJustifierBasic implements JPAlignerType
 
     this.line_words_sum += wt.length() + 1;
     this.line_words.add(wt);
+  }
+
+  @Override
+  public void breakLine()
+  {
+    this.finishLine();
   }
 
   @Override
