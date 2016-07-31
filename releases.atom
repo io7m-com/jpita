@@ -21,4 +21,11 @@
     <a:title>io7m-jpita 0.2.0 released</a:title>
     <a:content type="text"> io7m-jpita 0.2.0 released </a:content>
   </a:entry>
+  <a:entry>
+    <a:id>2</a:id>
+    <a:updated>2016-07-31T00:00:00Z</a:updated>
+    <a:published>2016-07-31T00:00:00Z</a:published>
+    <a:title>io7m-jpita 0.2.1 released</a:title>
+    <a:content type="text"> io7m-jpita 0.2.1 released </a:content>
+  </a:entry>
 </a:feed>
