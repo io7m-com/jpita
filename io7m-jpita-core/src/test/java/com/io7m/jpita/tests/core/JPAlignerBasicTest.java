@@ -41,6 +41,20 @@ public final class JPAlignerBasicTest
   }
 
   @Test
+  public void testOneWordTooLong()
+  {
+    final int width = 80;
+    final JPAlignerType a = JPAlignerBasic.create(width);
+    a.addWord("012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789");
+    final List<String> rs = a.finish();
+    JPTestUtilities.show(width, rs);
+
+    Assert.assertEquals(1L, (long) rs.size());
+    Assert.assertTrue(rs.get(0).startsWith("0123456789"));
+    Assert.assertEquals(90L, (long) rs.get(0).length());
+  }
+
+  @Test
   public void testBreakLinesOnly()
   {
     final int width = 80;
