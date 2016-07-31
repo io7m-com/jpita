@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.io7m.jpita</groupId>
     <artifactId>io7m-jpita</artifactId>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>0.2.1</version>
   </parent>
   <artifactId>io7m-jpita-documentation</artifactId>
 
@@ -24,6 +24,12 @@
   </scm>
 
   <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>io7m-jpita-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>com.io7m.jnull</groupId>
       <artifactId>io7m-jnull-core</artifactId>
