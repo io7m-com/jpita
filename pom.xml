@@ -23,8 +23,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <siteReposDirectory>/com/io7m/jpita</siteReposDirectory>
-    <siteDocumentationDirectory>/com/io7m/jpita/io7m-jpita-documentation</siteDocumentationDirectory>
+    <siteReposDirectory>com/io7m/jpita</siteReposDirectory>
+    <siteDocumentationDirectory>com/io7m/jpita/io7m-jpita-documentation</siteDocumentationDirectory>
   </properties>
 
   <licenses>
