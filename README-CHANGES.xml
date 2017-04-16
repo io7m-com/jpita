@@ -10,6 +10,11 @@
       <c:type-code-new/>
       <c:summary>Rename project. Use the new primogenitor POM and 2017 project conventions.</c:summary>
     </c:item>
+    <c:item>
+      <c:date>2017-04-16</c:date>
+      <c:type-code-change/>
+      <c:summary>Use jaffirm instead of valid4j and the latest versions of core io7m libraries.</c:summary>
+    </c:item>
   </c:release>
 
   <c:release c:ticket-system="com.github.io7m.jpita">
