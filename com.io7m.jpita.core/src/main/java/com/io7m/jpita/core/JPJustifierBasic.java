@@ -16,9 +16,9 @@
 
 package com.io7m.jpita.core;
 
+import com.io7m.jaffirm.core.Invariants;
 import com.io7m.jnull.NullCheck;
 import com.io7m.jranges.RangeCheck;
-import org.valid4j.Assertive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,8 +60,8 @@ public final class JPJustifierBasic implements JPAlignerType
     final SpaceTextDecisionType in_decider,
     final int in_width)
   {
-    this.overflow = NullCheck.notNull(in_overflow);
-    this.decider = NullCheck.notNull(in_decider);
+    this.overflow = NullCheck.notNull(in_overflow, "Overflow");
+    this.decider = NullCheck.notNull(in_decider, "Decider");
     this.width = RangeCheck.checkGreaterInteger(
       in_width, "Width", 0, "Minimum width");
     this.line_words = new ArrayList<>(16);
@@ -115,7 +115,8 @@ public final class JPJustifierBasic implements JPAlignerType
       return words.get(0);
     }
 
-    Assertive.require(word_count > 1);
+    Invariants.checkInvariantI(
+      word_count, word_count > 1, c -> "Word count must be > 1");
 
     /**
      * Decide how much of the line will be text.
@@ -147,7 +148,8 @@ public final class JPJustifierBasic implements JPAlignerType
     final int rest = space % gaps;
 
     final int all = text + (each * gaps) + rest;
-    Assertive.require(all == max_width);
+    Invariants.checkInvariant(
+      all == max_width, "Max width must be correct");
 
     /**
      * Assign {@code each} spaces to each gap.
@@ -222,7 +224,7 @@ public final class JPJustifierBasic implements JPAlignerType
   @Override
   public void addWord(final String w)
   {
-    NullCheck.notNull(w);
+    NullCheck.notNull(w, "Word");
 
     final String wt = w.trim();
     if (!this.canFit(wt)) {
@@ -231,10 +233,18 @@ public final class JPJustifierBasic implements JPAlignerType
       }
 
       if (!this.couldEverFit(wt)) {
-        Assertive.require(this.line_buffer.length() == 0);
-        Assertive.require(this.line_words.isEmpty());
-        Assertive.require(this.line_words_sum == 0);
-        Assertive.require(this.width <= wt.length());
+        Invariants.checkInvariant(
+          this.line_buffer.length() == 0,
+          "Line buffer must be empty");
+        Invariants.checkInvariant(
+          this.line_words.isEmpty(),
+          "Word list must be empty");
+        Invariants.checkInvariant(
+          this.line_words_sum == 0,
+          "Word sum must be zero");
+        Invariants.checkInvariant(
+          this.width <= wt.length(),
+          "Width must be <= trimmed text");
 
         switch (this.overflow) {
           case OVERFLOW_TRUNCATE: {

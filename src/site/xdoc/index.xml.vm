@@ -46,6 +46,7 @@ posuere quam, at ullamcorper eros metus eu lorem.
         <li>Full justification (flush left, flush right).</li>
         <li>Left alignment (flush left, ragged right).</li>
         <li>Full unit test coverage (100.0%).</li>
+        <li><a href="https://www.osgi.org/">OSGi</a>-ready.</li>
         <li>ISC license.</li>
       </ul>
     </subsection>

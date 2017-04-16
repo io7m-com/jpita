@@ -7,13 +7,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.io7m.jpita</groupId>
-    <artifactId>io7m-jpita</artifactId>
-    <version>0.2.1</version>
+    <artifactId>com.io7m.jpita</artifactId>
+    <version>0.3.0</version>
   </parent>
-  <artifactId>io7m-jpita-core</artifactId>
+  <artifactId>com.io7m.jpita.core</artifactId>
 
-  <packaging>jar</packaging>
-  <name>io7m-jpita-core</name>
+  <packaging>bundle</packaging>
+  <name>com.io7m.jpita.core</name>
   <description>Plain interesting text alignment (Core)</description>
   <url>http://io7m.github.io/jpita/</url>
 
@@ -25,17 +25,20 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.io7m.jaffirm</groupId>
+      <artifactId>com.io7m.jaffirm.core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.io7m.jnull</groupId>
-      <artifactId>io7m-jnull-core</artifactId>
+      <artifactId>com.io7m.jnull.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.junreachable</groupId>
+      <artifactId>com.io7m.junreachable.core</artifactId>
     </dependency>
     <dependency>
       <groupId>com.io7m.jranges</groupId>
-      <artifactId>io7m-jranges-core</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.valid4j</groupId>
-      <artifactId>valid4j</artifactId>
+      <artifactId>com.io7m.jranges.core</artifactId>
     </dependency>
 
     <dependency>
@@ -57,12 +60,18 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
+
+      <!-- Produce OSGi bundle -->
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <instructions>
+            <Export-Package>
+              com.io7m.jpita.core
+            </Export-Package>
+          </instructions>
         </configuration>
       </plugin>
     </plugins>

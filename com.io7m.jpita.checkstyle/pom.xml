@@ -7,13 +7,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.io7m.jpita</groupId>
-    <artifactId>io7m-jpita</artifactId>
-    <version>0.2.1</version>
+    <artifactId>com.io7m.jpita</artifactId>
+    <version>0.3.0</version>
   </parent>
-  <artifactId>io7m-jpita-checkstyle</artifactId>
+  <artifactId>com.io7m.jpita.checkstyle</artifactId>
 
   <packaging>jar</packaging>
-  <name>io7m-jpita-checkstyle</name>
+  <name>com.io7m.jpita.checkstyle</name>
   <description>Plain interesting text alignment (Checkstyle policy)</description>
   <url>http://io7m.github.io/jpita/</url>
 
@@ -26,7 +26,7 @@
   <dependencies>
     <dependency>
       <groupId>com.io7m.jnull</groupId>
-      <artifactId>io7m-jnull-core</artifactId>
+      <artifactId>com.io7m.jnull.core</artifactId>
     </dependency>
   </dependencies>
 
