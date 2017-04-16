@@ -41,7 +41,7 @@ public enum JPOverflowBehaviour
 
   JPOverflowBehaviour(final String in_name)
   {
-    this.name = NullCheck.notNull(in_name);
+    this.name = NullCheck.notNull(in_name, "Name");
   }
 
   /**

@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c:changelog xmlns:c="http://schemas.io7m.com/changelog/2.0.0">
-  <c:project>io7m-jpita</c:project>
+  <c:project>com.io7m.jpita</c:project>
 
   <c:release c:ticket-system="com.github.io7m.jpita">
-    <c:date>2016-05-29</c:date>
-    <c:version>0.1.0</c:version>
+    <c:date>2017-04-16</c:date>
+    <c:version>0.2.2</c:version>
     <c:item>
-      <c:date>2016-05-29</c:date>
+      <c:date>2017-04-16</c:date>
       <c:type-code-new/>
-      <c:summary>Initial release.</c:summary>
+      <c:summary>Rename project. Use the new primogenitor POM and 2017 project conventions.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.jpita">
+    <c:date>2016-07-31</c:date>
+    <c:version>0.2.1</c:version>
+    <c:item>
+      <c:date>2016-07-30</c:date>
+      <c:type-code-new/>
+      <c:ticket>2</c:ticket>
+      <c:summary>Do not let too-long words break empty lines.</c:summary>
     </c:item>
   </c:release>
 
@@ -24,13 +35,12 @@
   </c:release>
 
   <c:release c:ticket-system="com.github.io7m.jpita">
-    <c:date>2016-07-31</c:date>
-    <c:version>0.2.1</c:version>
+    <c:date>2016-05-29</c:date>
+    <c:version>0.1.0</c:version>
     <c:item>
-      <c:date>2016-07-30</c:date>
+      <c:date>2016-05-29</c:date>
       <c:type-code-new/>
-      <c:ticket>2</c:ticket>
-      <c:summary>Do not let too-long words break empty lines.</c:summary>
+      <c:summary>Initial release.</c:summary>
     </c:item>
   </c:release>
 

@@ -7,3 +7,4 @@ jpita
 
 See https://io7m.github.io/jpita/ for more information.
 
+![jpita](./src/site/resources/jpita.jpg?raw=true)

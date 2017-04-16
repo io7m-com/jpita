@@ -58,7 +58,7 @@ public final class JPAlignerBasic implements JPAlignerType
   @Override
   public void addWord(final String w)
   {
-    NullCheck.notNull(w);
+    NullCheck.notNull(w, "Word");
 
     final String wt = w.trim();
     if (this.line_buffer.length() + wt.length() + 1 > this.width) {

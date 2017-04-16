@@ -60,8 +60,8 @@ public final class JPJustifierBasic implements JPAlignerType
     final SpaceTextDecisionType in_decider,
     final int in_width)
   {
-    this.overflow = NullCheck.notNull(in_overflow);
-    this.decider = NullCheck.notNull(in_decider);
+    this.overflow = NullCheck.notNull(in_overflow, "Overflow");
+    this.decider = NullCheck.notNull(in_decider, "Decider");
     this.width = RangeCheck.checkGreaterInteger(
       in_width, "Width", 0, "Minimum width");
     this.line_words = new ArrayList<>(16);
@@ -222,7 +222,7 @@ public final class JPJustifierBasic implements JPAlignerType
   @Override
   public void addWord(final String w)
   {
-    NullCheck.notNull(w);
+    NullCheck.notNull(w, "Word");
 
     final String wt = w.trim();
     if (!this.canFit(wt)) {
