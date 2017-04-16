@@ -13,7 +13,7 @@
 
   <groupId>com.io7m.jpita</groupId>
   <artifactId>com.io7m.jpita</artifactId>
-  <version>0.2.1</version>
+  <version>0.3.0</version>
 
   <packaging>pom</packaging>
   <name>com.io7m.jpita</name>
@@ -31,7 +31,7 @@
     <siteDocumentationDirectory>com/io7m/jpita/com.io7m.jpita.documentation</siteDocumentationDirectory>
     <io7m.checkstyle.artifact>com.io7m.jpita.checkstyle</io7m.checkstyle.artifact>
     <io7m.checkstyle.path>/com/io7m/jpita/checkstyle/checkstyle.xml</io7m.checkstyle.path>
-    <io7m.api.previousVersion>0.2.1</io7m.api.previousVersion>
+    <io7m.api.previousVersion>0.3.0</io7m.api.previousVersion>
   </properties>
 
   <licenses>
