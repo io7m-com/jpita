@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.io7m.jpita</groupId>
     <artifactId>com.io7m.jpita</artifactId>
-    <version>0.3.0</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>com.io7m.jpita.core</artifactId>
 
@@ -63,6 +63,12 @@
             </Export-Package>
           </instructions>
         </configuration>
+      </plugin>
+
+      <!-- Determine test coverage -->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
