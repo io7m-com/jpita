@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"com.io7m.jpita.core"},{"l":"com.io7m.jpita.documentation"}]

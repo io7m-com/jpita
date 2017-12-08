@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.io7m.jpita.documentation","l":"Documentation"},{"p":"com.io7m.jpita.core","l":"JPAlignerBasic"},{"p":"com.io7m.jpita.core","l":"JPAlignerType"},{"p":"com.io7m.jpita.core","l":"JPJustifierBasic"},{"p":"com.io7m.jpita.core","l":"JPJustifierBasic.SpaceTextDecisionType"},{"p":"com.io7m.jpita.core","l":"JPOverflowBehaviour"}]
