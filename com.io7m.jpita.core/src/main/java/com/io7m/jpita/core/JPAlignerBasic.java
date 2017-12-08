@@ -16,7 +16,7 @@
 
 package com.io7m.jpita.core;
 
-import com.io7m.jnull.NullCheck;
+import java.util.Objects;
 import com.io7m.jranges.RangeCheck;
 
 import java.util.ArrayList;
@@ -58,7 +58,7 @@ public final class JPAlignerBasic implements JPAlignerType
   @Override
   public void addWord(final String w)
   {
-    NullCheck.notNull(w, "Word");
+    Objects.requireNonNull(w, "Word");
 
     final String wt = w.trim();
     if (this.line_buffer.length() + wt.length() + 1 > this.width) {

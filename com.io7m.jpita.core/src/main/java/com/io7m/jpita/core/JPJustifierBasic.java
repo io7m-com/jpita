@@ -17,7 +17,7 @@
 package com.io7m.jpita.core;
 
 import com.io7m.jaffirm.core.Invariants;
-import com.io7m.jnull.NullCheck;
+import java.util.Objects;
 import com.io7m.jranges.RangeCheck;
 
 import java.util.ArrayList;
@@ -60,8 +60,8 @@ public final class JPJustifierBasic implements JPAlignerType
     final SpaceTextDecisionType in_decider,
     final int in_width)
   {
-    this.overflow = NullCheck.notNull(in_overflow, "Overflow");
-    this.decider = NullCheck.notNull(in_decider, "Decider");
+    this.overflow = Objects.requireNonNull(in_overflow, "Overflow");
+    this.decider = Objects.requireNonNull(in_decider, "Decider");
     this.width = RangeCheck.checkGreaterInteger(
       in_width, "Width", 0, "Minimum width");
     this.line_words = new ArrayList<>(16);
@@ -224,7 +224,7 @@ public final class JPJustifierBasic implements JPAlignerType
   @Override
   public void addWord(final String w)
   {
-    NullCheck.notNull(w, "Word");
+    Objects.requireNonNull(w, "Word");
 
     final String wt = w.trim();
     if (!this.canFit(wt)) {

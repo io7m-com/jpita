@@ -15,8 +15,12 @@
  */
 
 /**
- * Core types and functions.
+ * Plain interesting text alignment (Documentation)
  */
 
- package com.io7m.jpita.core;
+module com.io7m.jpita.documentation
+{
+  requires com.io7m.jpita.core;
 
+  exports com.io7m.jpita.documentation;
+}

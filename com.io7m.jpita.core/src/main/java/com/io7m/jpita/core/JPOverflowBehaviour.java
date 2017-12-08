@@ -16,7 +16,7 @@
 
 package com.io7m.jpita.core;
 
-import com.io7m.jnull.NullCheck;
+import java.util.Objects;
 
 /**
  * Actions to take when overflow cannot be avoided.
@@ -41,7 +41,7 @@ public enum JPOverflowBehaviour
 
   JPOverflowBehaviour(final String in_name)
   {
-    this.name = NullCheck.notNull(in_name, "Name");
+    this.name = Objects.requireNonNull(in_name, "Name");
   }
 
   /**

@@ -18,5 +18,4 @@
  * Checkstyle policy.
  */
 
-@com.io7m.jnull.NonNullByDefault package com.io7m.jpita.checkstyle;
-
+package com.io7m.jpita.checkstyle;
