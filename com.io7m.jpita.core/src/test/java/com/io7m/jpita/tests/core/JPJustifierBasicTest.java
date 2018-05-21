@@ -16,7 +16,6 @@
 
 package com.io7m.jpita.tests.core;
 
-import com.io7m.jpita.core.JPAlignerBasic;
 import com.io7m.jpita.core.JPAlignerType;
 import com.io7m.jpita.core.JPJustifierBasic;
 import com.io7m.jpita.core.JPOverflowBehaviour;

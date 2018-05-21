@@ -16,11 +16,11 @@
 
 package com.io7m.jpita.core;
 
-import java.util.Objects;
 import com.io7m.jranges.RangeCheck;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * An basic aligner that left-aligns text.
@@ -69,7 +69,7 @@ public final class JPAlignerBasic implements JPAlignerType
     }
 
     this.line_buffer.append(w);
-    this.line_buffer.append(" ");
+    this.line_buffer.append(' ');
   }
 
   @Override
