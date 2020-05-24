@@ -18,5 +18,4 @@
  * Documentation.
  */
 
- package com.io7m.jpita.documentation;
-
+package com.io7m.jpita.documentation;
