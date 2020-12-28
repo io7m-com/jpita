@@ -17,7 +17,6 @@
 package com.io7m.jpita.tests.core;
 
 import com.io7m.jpita.core.JPAlignerType;
-import com.io7m.junreachable.UnreachableCodeException;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
@@ -30,7 +29,7 @@ final class JPTestUtilities
 {
   private JPTestUtilities()
   {
-    throw new UnreachableCodeException();
+    throw new AssertionError("Unreachable code!");
   }
 
   static List<String> resourceAsWords(

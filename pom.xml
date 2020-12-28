@@ -85,11 +85,6 @@
         <version>2.0.0</version>
       </dependency>
       <dependency>
-        <groupId>com.io7m.junreachable</groupId>
-        <artifactId>com.io7m.junreachable.core</artifactId>
-        <version>2.1.1</version>
-      </dependency>
-      <dependency>
         <groupId>com.io7m.jranges</groupId>
         <artifactId>com.io7m.jranges.core</artifactId>
         <version>3.0.0</version>
