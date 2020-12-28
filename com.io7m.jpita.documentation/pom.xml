@@ -32,6 +32,16 @@
       <groupId>com.io7m.primogenitor</groupId>
       <artifactId>com.io7m.primogenitor.support</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.annotation.bundle</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.annotation.versioning</artifactId>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>

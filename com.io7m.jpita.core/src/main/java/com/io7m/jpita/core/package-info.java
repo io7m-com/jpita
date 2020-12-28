@@ -18,4 +18,9 @@
  * Core types and functions.
  */
 
+@Export
+@Version("1.1.0")
 package com.io7m.jpita.core;
+
+import org.osgi.annotation.bundle.Export;
+import org.osgi.annotation.versioning.Version;

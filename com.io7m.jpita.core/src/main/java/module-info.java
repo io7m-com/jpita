@@ -20,6 +20,9 @@
 
 module com.io7m.jpita.core
 {
+  requires static org.osgi.annotation.versioning;
+  requires static org.osgi.annotation.bundle;
+
   requires com.io7m.jranges.core;
   requires com.io7m.jaffirm.core;
 
