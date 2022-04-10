@@ -1,5 +1,5 @@
 /*
- * Copyright © 2016 <code@io7m.com> http://io7m.com
+ * Copyright © 2016 Mark Raynsford <code@io7m.com> https://www.io7m.com
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -17,11 +17,11 @@
 package com.io7m.jpita.core;
 
 import com.io7m.jaffirm.core.Invariants;
-import java.util.Objects;
 import com.io7m.jranges.RangeCheck;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * An basic aligner that fully justifies text. The algorithm used is a simple
@@ -197,7 +197,7 @@ public final class JPJustifierBasic implements JPAlignerType
     for (int index = 0; index < word_count; ++index) {
       buffer.append(words.get(index));
       if (index + 1 < word_count) {
-        buffer.append(" ");
+        buffer.append(' ');
       }
     }
     return buffer.toString();
@@ -208,7 +208,7 @@ public final class JPJustifierBasic implements JPAlignerType
     final int count)
   {
     for (int index = 0; index < count; ++index) {
-      buffer.append(" ");
+      buffer.append(' ');
     }
   }
 
@@ -248,7 +248,7 @@ public final class JPJustifierBasic implements JPAlignerType
 
         switch (this.overflow) {
           case OVERFLOW_TRUNCATE: {
-            final String wtt = wt.substring(0, this.width - 1) + "…";
+            final String wtt = wt.substring(0, this.width - 1) + '…';
             this.line_words_sum = wtt.length() + 1;
             this.line_words.add(wtt);
             this.finishLine();

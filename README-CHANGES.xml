@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><c:changelog xmlns:c="urn:com.io7m.changelog:4.0" project="com.io7m.jpita">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<c:changelog project="com.io7m.jpita" xmlns:c="urn:com.io7m.changelog:4.0">
   <c:releases>
-    <c:release date="2016-05-29T00:00:00+00:00" ticket-system="com.github.io7m.jpita" version="0.1.0">
+    <c:release date="2016-05-29T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jpita" version="0.1.0">
       <c:changes>
         <c:change date="2016-05-29T00:00:00+00:00" summary="Initial release."/>
       </c:changes>
     </c:release>
-    <c:release date="2016-07-26T00:00:00+00:00" ticket-system="com.github.io7m.jpita" version="0.2.0">
+    <c:release date="2016-07-26T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jpita" version="0.2.0">
       <c:changes>
         <c:change date="2016-07-26T00:00:00+00:00" summary="Add the ability to manually break lines.">
           <c:tickets>
@@ -14,7 +15,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2016-07-31T00:00:00+00:00" ticket-system="com.github.io7m.jpita" version="0.2.1">
+    <c:release date="2016-07-31T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jpita" version="0.2.1">
       <c:changes>
         <c:change date="2016-07-30T00:00:00+00:00" summary="Do not let too-long words break empty lines.">
           <c:tickets>
@@ -23,16 +24,21 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2017-04-16T00:00:00+00:00" ticket-system="com.github.io7m.jpita" version="0.3.0">
+    <c:release date="2017-04-16T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jpita" version="0.3.0">
       <c:changes>
         <c:change date="2017-04-16T00:00:00+00:00" summary="Rename project. Use the new primogenitor POM and 2017 project conventions."/>
         <c:change compatible="false" date="2017-04-16T00:00:00+00:00" summary="Use jaffirm instead of valid4j and the latest versions of core io7m libraries."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-12-08T13:26:23+00:00" ticket-system="com.github.io7m.jpita" version="1.0.0">
+    <c:release date="2017-12-08T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jpita" version="1.0.0">
       <c:changes>
         <c:change compatible="false" date="2017-12-08T00:00:00+00:00" summary="Publish JDK 9 modules, require JDK 9 to build and run"/>
-        <c:change compatible="false" date="2017-12-08T13:26:23+00:00" summary="Remove jnull and jfunctional dependencies"/>
+        <c:change compatible="false" date="2017-12-08T00:00:00+00:00" summary="Remove jnull and jfunctional dependencies"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-04-10T13:55:23+00:00" is-open="false" ticket-system="com.github.io7m.jpita" version="2.0.0">
+      <c:changes>
+        <c:change compatible="false" date="2022-04-10T00:00:00+00:00" summary="Require JDK 17"/>
       </c:changes>
     </c:release>
   </c:releases>

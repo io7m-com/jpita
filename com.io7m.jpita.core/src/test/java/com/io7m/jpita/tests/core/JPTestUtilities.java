@@ -1,5 +1,5 @@
 /*
- * Copyright © 2016 <code@io7m.com> http://io7m.com
+ * Copyright © 2016 Mark Raynsford <code@io7m.com> https://www.io7m.com
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -17,21 +17,19 @@
 package com.io7m.jpita.tests.core;
 
 import com.io7m.jpita.core.JPAlignerType;
-import com.io7m.junreachable.UnreachableCodeException;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-
 import java.util.List;
 
 final class JPTestUtilities
 {
   private JPTestUtilities()
   {
-    throw new UnreachableCodeException();
+    throw new AssertionError("Unreachable code!");
   }
 
   static List<String> resourceAsWords(
