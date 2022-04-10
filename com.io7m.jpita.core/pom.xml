@@ -15,7 +15,7 @@
   <packaging>jar</packaging>
   <name>com.io7m.jpita.core</name>
   <description>Plain interesting text alignment (Core)</description>
-  <url>http://io7m.github.io/jpita/</url>
+  <url>https://www.io7m.com/software/jpita</url>
 
   <dependencies>
     <dependency>
