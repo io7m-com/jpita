@@ -13,3 +13,40 @@ jpita
 | OpenJDK (Temurin) LTS | Linux | [![Build (OpenJDK (Temurin) LTS, Linux)](https://img.shields.io/github/actions/workflow/status/io7m-com/jpita/main.linux.temurin.lts.yml)](https://www.github.com/io7m-com/jpita/actions?query=workflow%3Amain.linux.temurin.lts)|
 | OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/jpita/main.windows.temurin.current.yml)](https://www.github.com/io7m-com/jpita/actions?query=workflow%3Amain.windows.temurin.current)|
 | OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/jpita/main.windows.temurin.lts.yml)](https://www.github.com/io7m-com/jpita/actions?query=workflow%3Amain.windows.temurin.lts)|
+
+## jpita
+
+Java functions to align and justify plain text.
+
+## Features
+
+* Full justification (flush left, flush right).
+* Left alignment (flush left, ragged right).
+* High coverage test suite.
+* [OSGi-ready](https://www.osgi.org/)
+* [JPMS-ready](https://en.wikipedia.org/wiki/Java_Platform_Module_System)
+* ISC license.
+
+## Usage
+
+Add a series of words to a `JPAlignerType` instance:
+
+```
+var a = JPAlignerBasic.create(80);
+
+a.addWord("Hello");
+a.addWord("World");
+var s = a.finish();
+```
+
+```
+var a = JPJustifierBasic.create(OVERFLOW_ANYWAY, JUSTIFY_UNDER_HALF, 80);
+
+a.addWord("Hello");
+a.breakLine();
+a.addWord("World");
+var s = a.finish();
+```
+
+The result of `finish()` is a list of justified and/or aligned lines of text.
+

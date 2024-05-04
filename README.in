@@ -1,0 +1,36 @@
+
+## jpita
+
+Java functions to align and justify plain text.
+
+## Features
+
+* Full justification (flush left, flush right).
+* Left alignment (flush left, ragged right).
+* High coverage test suite.
+* [OSGi-ready](https://www.osgi.org/)
+* [JPMS-ready](https://en.wikipedia.org/wiki/Java_Platform_Module_System)
+* ISC license.
+
+## Usage
+
+Add a series of words to a `JPAlignerType` instance:
+
+```
+var a = JPAlignerBasic.create(80);
+
+a.addWord("Hello");
+a.addWord("World");
+var s = a.finish();
+```
+
+```
+var a = JPJustifierBasic.create(OVERFLOW_ANYWAY, JUSTIFY_UNDER_HALF, 80);
+
+a.addWord("Hello");
+a.breakLine();
+a.addWord("World");
+var s = a.finish();
+```
+
+The result of `finish()` is a list of justified and/or aligned lines of text.
